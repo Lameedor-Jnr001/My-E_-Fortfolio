@@ -63,7 +63,7 @@
         list-style-type: none;
         display: inline-block;
         margin: 0 10px;
-        padding: 10px 20px;
+        padding: 10px 10px;
     }
 
     nav ul li a {
@@ -122,7 +122,7 @@
     .about-text {
         color: white;
         font-size: 20px;
-        text-transform:none;
+        text-transform: none;
         text-align: justify;
         margin-bottom: 20px;
     }
@@ -157,7 +157,7 @@
         width: 100%;
         padding: 100px 0px;
     }
-
+    
     .title h2 {
         color: rgb(250, 246, 246);
         font-size: 35px;
@@ -167,7 +167,7 @@
     }
 
     .box {
-        display: block;
+        display: flex;
         justify-content: center;
         align-items: center;
         min-height: 400px;
@@ -180,7 +180,7 @@
         background: #3a3939;
         border-radius: 20px;
         margin: 15px;
-        position:relative;
+        position: relative;
         overflow: hidden;
         text-align: center;
         box-shadow: #151212
@@ -188,7 +188,7 @@
 
     .card i {
         font-size: 50px;
-        display:flex;
+        display: block;
         text-align: center;
         margin: 25px 0px;
         color: #f9004d
@@ -261,7 +261,7 @@
     .skill-bar {
         width: 100%;
         height: 12px;
-        background-color: #2c2b2b;
+        background-color: #676565;
         border-radius: 6px;
         overflow: hidden;
     }
@@ -272,36 +272,79 @@
     }
 
     /* Optional Styling */
-    #skills {
+    .skills {
         padding: 20px;
-        background-color: #474646;
+        background-color: #232222;
+            
     }
+
     .social-icons {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 5px;
+
+    }
+
+    .social-icons li {
+        display: inline-block;
+
+    }
+
+    .social-icons a {
+        color: #f4f2f3;
+        font-size: 25px;
+
+    }
+
+    /* Optional Styling */
+    #social-media {
+        padding: 20px;
+        background-color: #0f0c0c;
+    }
+    .social-text h3 {
+        color: rgb(76, 75, 75);
+        font-size: 10px;
+        
+    }
+
+        .back-to-top-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      padding: 10px 15px;
+      border-radius: 4px;
+      background-color: #fa09e2;
+      color: #fff;
+      text-decoration:solid
+    }
+    .portfolio {
   display: flex;
-  gap: 5px;
-  
+  flex-wrap: wrap;
+  justify-content: left;
+  background-color: #60d6fd;
 }
 
-.social-icons li {
-  display: inline-block;
-  
+.item {
+  position: relative;
+  margin: 10px;
 }
 
-.social-icons a {
-  color: #f8f5f7;
-  font-size: 25px;
-  
+.item img {
+  width: 50%;
+  height: auto;
+  display: flex;
+  border-radius: 5px;
 }
 
-/* Optional Styling */
-#social-media {
-  padding: 20px;
-  background-color: #0f0c0c;
-}
+
+
+   
+    
 </style>
+
 <!------hero Section start-->
 <div class="hero">
     <nav>
@@ -315,8 +358,10 @@
 </div>
 </nav>
 <section id="home">
-    <h4>Hi, I'm Sanusi Abubakar</h4>
-    <h4>I am an architect I based in Jalingo, Taraba State</h4>
+    <h4><strong>Hi, I'm Sanusi Abubakar</strong></h4>
+    <h4>
+        <marquee>I am an architect I based in Jalingo, Taraba State</marquee>
+    </h4>
 </section>
 </div>
 
@@ -325,13 +370,13 @@
         <img src="images/background.png.webp" />
     </p>
     <!....about section start...>
-    <section id="about"></section>
+        <section id="about"></section>
         <section class="About">
             <div class="main">
                 <img src="images/background.jpg.jfif">
                 <div class="about-text">
                     <h2> <span>About Me</span></h2>
-                    <h5>Architecture & <span>Design</span> </h5>
+                    <!-- <h5>Architecture & <span>Design</span> </h5> -->
 
                     <p><strong>I</strong> am a passionate architect with a deep appreciation for innovative and
                         sustainable design. With [X] years of experience in the industry, I have had the opportunity to
@@ -345,80 +390,80 @@
                 </div>
             </div>
         </section>
-        </section>
-       
         <div class="services">
             <div class="title">
                 <h2> Our Services</h2>
             </div>
+
             <div class="box">
                 <div class="card">
                     <i class="fas fa-user"></i>
                     <h3>Architectural Design</h3>
-                    <div class="pra">
+                        <div class="pra">
                         <p>Creating innovative and functional architectural designs for various project types, including
                             residential, commercial, and institutional buildings.</p>
                         <p style="text-align: center;">
                             <a class="button" href="#">Read More</a>
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="card">
-                        <i class="fas fa-bars"></i>
-                        <h3>Interior Design</h3>
-                        <div class="pra">
-                            <p>Designing interior spaces that harmonize with the overall architectural concept,
-                                considering factors such as aesthetics, functionality, and user experience.</p>
-                            <p style="text-align: center;">
-                                <a class="button" href="#">Read More</a>
                             </p>
-                        </div>
                     </div>
                 </div>
             </div>
-                    <div class="box">
-                    <div class="card">
-                        <i class="fas fa-bell"></i>
-                        <h3>Urban planning</h3>
-                        <div class="pra">
-                            <p>Developing comprehensive plans for urban areas, considering aspects such as land use,
-                                transportation, infrastructure, and sustainability.
-                            </p>
-                            <p style="text-align: center;"></p>
-                            <a class="button" href="#">Read More</a>
-                            </p>
-                        </div>
-                    </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <i class="fas fa-user"></i>
+                <h3>Interior Design</h3>
+                <div class="pra">
+                    <p>Designing interior spaces that harmonize with the overall architectural concept,
+                        considering factors such as aesthetics, functionality, and user experience.</p>
+                    <p style="text-align: center;">
+                        <a class="button" href="#">Read More</a>
+                    </p>
                 </div>
             </div>
-                </section>
-            <section id="Contact">
-                <div class="Contact form"></div>
-                <h2>Contact Me</h2>
-                <form action="#" method="POST">
-                    <div>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <div>
-                        <button type="submit">Send Message</button>
-                    </div>
-                    </section>
-                </form>
-                  </div>
+        </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <i class="fas fa-user"></i>
+                <h3>Urban planning</h3>
+                <div class="pra">
+                    <p>Developing comprehensive plans for urban areas, considering aspects such as land use,
+                        transportation, infrastructure, and sustainability.
+                    </p>
+                    <p style="text-align: center;"></p>
+                    <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <section id="Contact">
+            <div class="Contact form"></div>
+            <h2>Contact Me</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send Message</button>
+
+        </div>
+        </section>
+        </form>
+        </div>
         <section id="Skills">
-            <h2>My Architectural Skills</h2>
+            <h2><strong>My Architectural Skills</strong></h2>
             <ul class="skill-list">
                 <li>
                     <h3>Architectural Design</h3>
@@ -427,6 +472,12 @@
                             aria-valuemin="0" aria-valuemax="100">90%</div>
                     </div>
                 </li>
+                <div class="item">
+                    <img src="images/architectural.jpg" alt=" "> 
+                    <div class="overlay">
+                                           
+                    </div>
+                  </div>
                 <li>
                     <h3>Interio Design</h3>
                     <div class="progress">
@@ -436,13 +487,25 @@
                 </li>
                 </li>
                 <li>
-                    <h3>Urban planning</h3>
+            
+                    <div class="item">
+                        <img src="images/interio d.jpg" alt=" ">
+                        <div class="overlay">
+                                                  
+                        </div>
+                      </div>        <h3>Urban planning</h3>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25"
                             aria-valuemin="0" aria-valuemax="100">75%</div>
                     </div>
                 </li>
                 </li>
+                <div class="item">
+                    <img src="images/urban.webp" alt=" ">
+                    <div class="overlay">
+                                              
+                    </div>
+                  </div>
                 <li>
                     <h3>Project Management</h3>
                     <div class="progress">
@@ -450,6 +513,12 @@
                             aria-valuemin="0" aria-valuemax="100">95%</div>
                     </div>
                 </li>
+                <div class="item">
+                    <img src="images/project m.jpg" alt=" ">
+                    <div class="overlay">
+                                              
+                    </div>
+                  </div>
                 <li>
                     <h3>Sustenable Design</h3>
                     <div class="progress">
@@ -457,23 +526,41 @@
                             aria-valuemin="0" aria-valuemax="100">87%</div>
                     </div>
                 </li>
+                <div class="item">
+                    <img src="images/sustenable.jpg" alt=" ">
+                    <div class="overlay">
+                                            
+                    </div>
+                  </div>
+                </div>
         </section>
-        </div>
-        <nav>
-        <section id="social-media">
-            <h2>Follow Me @ </h2>
-            <ul class="social-icons">
-              <li><a href="https://www.facebook.com/Abubakar Sanusi" target="_blank"><i class="fab fa-facebook"></i></a></li>
-              <li><a href="https://www.twitter.com/Abubakar Sanusi" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="https://www.instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i></a></li>
-              <!-- Add more social media icons and links here -->
-            </ul>
-        </nav>
-          </section>
-        </section>
+    </section>
+    <a href="#top" class="back-to-top-button">Back to Top</a>
+    
+    </section>
         <footer>
             <p>&copy; 2023 Architecture Portfolio. All rights reserved.</p>
-        </footer>
+            <div class="contact-info">
+                <p class="phone"><i class="fa fa-phone"></i> Phone:09039979826</p>
+                <p class="email"><i class="fa fa-envelope"></i> Email: sanusiabubakar20199@gmail.com</p>
+              </div>
+            <section id="social-media">
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/Abubakar Sanusi" target="_blank"><i
+                                class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/Abubakar Sanusi" target="_blank"><i
+                                class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/your-profile" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.skype.com/your-profile" target="_blank"><i class="fab fa-skype"></i></a>
+                    </li>
+                    <li><a href="https://www.whatsapp.com/Lameedor_jnr" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a></li>
+                                   
+                </ul>
+                </section>
+                </footer>
         </section>
-</body>
+       
+       </body>
 </html>
